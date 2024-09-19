@@ -1,0 +1,37 @@
+//Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		string input = Console.ReadLine();
+		int quantidade = QuantasA(input);
+		if (quantidade > 1)
+		{
+			Console.WriteLine("A letra 'A' aparece " + quantidade + " vezes");
+		}
+		else if (quantidade == 1)
+		{
+			Console.WriteLine("A letra 'A' aparece apenas uma vez");
+		}
+		else
+		{
+			Console.WriteLine("A letra 'A' não aparece aqui");
+		}
+		
+	}
+    static int QuantasA(string s)
+    {
+        int contagem = 0;
+        foreach (char x in s)
+        {
+            if (x == 'A' || x == 'a')
+            {
+                contagem++;
+            }
+        }
+        return contagem;
+    }
+}
